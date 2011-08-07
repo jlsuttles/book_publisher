@@ -8,7 +8,7 @@ Gem for building setting up and building books in multiple formats
 
 ## FEATURES/PROBLEMS
 
-* 
+* doesn't do anything yet
 
 ## SYNOPSIS
 
@@ -16,7 +16,7 @@ Gem for building setting up and building books in multiple formats
 
 ## REQUIREMENTS
 
-* 
+* bundler
 
 ## INSTALL
 
@@ -27,6 +27,7 @@ Gem for building setting up and building books in multiple formats
 After checking out the source, run
 
     rake newb
+    bundle install
 
 This task will install any missing dependencies, run the tests/specs,
 and generate the RDoc.
