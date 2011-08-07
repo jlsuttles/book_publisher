@@ -4,7 +4,7 @@ require "hoe"
 Hoe.plugins.delete :rubyforge
 Hoe.plugin :doofus, :git, :minitest, :rubygems
 
-Hoe.spec "dang" do
+Hoe.spec "book_publisher" do
   developer "Shane Becker", "veganstraightedge@gmail.com"
   developer "Jessica Lynn Suttles", "jlsuttles@gmail.com"
 
