@@ -1,37 +1,37 @@
 # book-publisher
 
-* FIX (url)
+* http://github.com/lessthan3/book_publisher
 
-## DESCRIPTION:
+## DESCRIPTION
 
-FIX (describe your package)
+Gem for building setting up and building books in multiple formats
 
-## FEATURES/PROBLEMS:
+## FEATURES/PROBLEMS
 
-* FIX (list of features or problems)
+* 
 
-## SYNOPSIS:
+## SYNOPSIS
 
-  FIX (code sample of usage)
+  book_publisher new <book name>
 
-## REQUIREMENTS:
+## REQUIREMENTS
 
-* FIX (list of requirements)
+* 
 
-## INSTALL:
+## INSTALL
 
-* FIX (sudo gem install, anything else)
+* gem install book_publisher
 
-## DEVELOPERS:
+## DEVELOPERS
 
-After checking out the source, run:
+After checking out the source, run
 
     rake newb
 
 This task will install any missing dependencies, run the tests/specs,
 and generate the RDoc.
 
-## LICENSE:
+## LICENSE
 
 PUBLIC DOMAIN.
 
