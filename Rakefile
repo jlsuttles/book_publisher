@@ -11,4 +11,3 @@ Hoe.spec "book_publisher" do
   self.extra_rdoc_files = Dir["*.rdoc"]
   # self.readme_file      = "README.md"
 end
-
