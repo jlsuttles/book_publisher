@@ -1,8 +1,10 @@
+#!/usr/bin/env ruby
+
 name_spaced_task = ARGV.shift.match(/^(\w+)(:*)(\w*)$/)
 name_space       = name_spaced_task[1].capitalize
 
 # TODO smarter load path
-require "../lib/#{name_space.downcase}"
+require "commands/#{name_space.downcase}"
 
 args = ARGV
 

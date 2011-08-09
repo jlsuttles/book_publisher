@@ -5,5 +5,5 @@ README.txt
 Rakefile
 bin/book_publisher
 lib/book_publisher.rb
-lib/source.rb
+lib/commands/source.rb
 test/test_book_publisher.rb
