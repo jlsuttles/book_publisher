@@ -1,5 +1,12 @@
 #!/usr/bin/env ruby
 
+if ARGV.empty?
+  puts
+  puts "HELP! Need more commands!"
+  puts
+  exit
+end
+
 name_spaced_task = ARGV.shift.match(/^(\w+)(:*)(\w*)$/)
 name_space       = name_spaced_task[1].capitalize
 

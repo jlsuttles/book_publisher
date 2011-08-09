@@ -2,10 +2,10 @@ class Source
   class << self
     # show book source git/github url
     def default
-    puts "
+      puts "
 github: https://github.com/lessthan3/Sara-Beth-Cookbook-1
    git: git@github.com:lessthan3/Sara-Beth-Cookbook-1.git"
-    puts
+      puts
     end
 
     # add/update book source git/github url
