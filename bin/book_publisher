@@ -10,6 +10,10 @@ end
 name_spaced_task = ARGV.shift.match(/^(\w+)(:*)(\w*)$/)
 name_space       = name_spaced_task[1].capitalize
 
+if name_space == "Config"
+  name_space = "Settings"
+end
+
 # TODO smarter load path
 require "lib/commands/#{name_space.downcase}"
 
