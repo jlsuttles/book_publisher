@@ -1,3 +1,5 @@
+require "yaml"
+
 class Settings
   class << self
     def default
@@ -36,18 +38,33 @@ class Settings
 
     def read_or_write(property, value=:read_or_write_value)
       if value.is_a?(Symbol)
-        read(property)
+        read(property.to_s)
       else
-        write(property, value)
+        write(property.to_s, value)
       end
     end
 
+    def config_yaml
+      YAML::load(File.read("config.yml"))
+    end
+
     def read(property)
-      puts "config.yml read property"
+      puts
+      puts config_yaml[property]
+      puts
     end
 
     def write(property, value)
-      puts "config.yml write property : #{value}"
+      config = config_yaml
+      config[property] = value.join(" ")
+
+      File.open('config.yml', 'w+') do |file|
+        file.puts config.to_yaml
+      end
+
+      puts
+      puts "#{property} is now #{value}"
+      puts
     end
   end
 end
