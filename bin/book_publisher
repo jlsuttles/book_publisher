@@ -11,7 +11,7 @@ name_spaced_task = ARGV.shift.match(/^(\w+)(:*)(\w*)$/)
 name_space       = name_spaced_task[1].capitalize
 
 # TODO smarter load path
-require "commands/#{name_space.downcase}"
+require "lib/commands/#{name_space.downcase}"
 
 args = ARGV
 
