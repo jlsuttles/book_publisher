@@ -3,38 +3,15 @@ require "yaml"
 class Settings
   class << self
     def default
-      puts "
-      Config commands:
-      author
-      email
-      title
-      subtitle
-      source
-      "
+      puts "Read or write config options."
+      puts "Default Options: author email title subtitle source"
+      puts "   Read example: book_publisher config:email"
+      puts "  Write example: book_publisher config:email awesome@example.com"
     end
-
-    def author(value=:author)
-      read_or_write(:author, value)
+    
+    def method_missing(meth, *args, &block)
+      read_or_write(meth, *args)
     end
-
-    def email(value=:email)
-      read_or_write(:email, value)
-    end
-
-    def source(value=:source)
-      read_or_write(:source, value)
-    end
-
-    def title(value=:title)
-      read_or_write(:title, value)
-    end
-
-    def subtitle(value=:subtitle)
-      read_or_write(:subtitle, value)
-    end
-
-
-    private
 
     def read_or_write(property, value=:read_or_write_value)
       if value.is_a?(Symbol)
@@ -44,14 +21,14 @@ class Settings
       end
     end
 
+    private
+
     def config_yaml
       YAML::load(File.read("config.yml"))
     end
 
     def read(property)
-      puts
       puts config_yaml[property]
-      puts
     end
 
     def write(property, value)
@@ -62,9 +39,8 @@ class Settings
         file.puts config.to_yaml
       end
 
-      puts
-      puts "#{property} is now #{value}"
-      puts
+      puts "Config updated."
+      puts "#{property}: #{value}"
     end
   end
 end
