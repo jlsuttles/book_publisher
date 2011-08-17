@@ -1,6 +1,6 @@
 require "yaml"
 
-class Settings
+class Config
   class << self
     def default
       puts "Read or write config options."

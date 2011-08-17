@@ -1,2 +1,25 @@
 load path clarification
 Config class doesn't work. resevered word?
+namespace * under BookPublihser
+use FileUtil for mkdir
+
+
+USER STORY:
+
+bp new project_name
+
+  cd project_name
+  bp config:source git@foo.git
+  bp config:title <lsdjf>
+  bp config:subtitle <asdlfjslkdfjlksd>
+  bp stub all
+
+bp stub epub
+
+bp update all
+bp update html mobi
+
+bp build all
+bp build html epub
+
+bp publish

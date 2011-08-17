@@ -1,9 +1,12 @@
 .autotest
-History.txt
-Manifest.txt
-README.txt
-Rakefile
 bin/book_publisher
+History.txt
 lib/book_publisher.rb
-lib/commands/source.rb
+lib/commands/config.rb
+lib/commands/new.rb
+lib/commands/stub.rb
+Manifest.txt
+Rakefile
+README.txt
+templates/config.yml
 test/test_book_publisher.rb
