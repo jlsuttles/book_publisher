@@ -2,6 +2,7 @@ require "fileutils"
 
 class New
   class << self
+
     def default(project_name=["book"])
       project_name = project_name.join("_")
 
@@ -11,10 +12,7 @@ class New
         FileUtils.mkdir(project_name)
       end
 
-      original_path = File.expand_path('../../../templates/config.yml', __FILE__)
-      new_path      = "#{project_name}/config.yml"
-
-      FileUtils.cp(original_path, new_path)
+      copy_template("config.yml", project_name)
 
       puts "Created: #{project_name}"
       puts "Created: #{project_name}/config.yml"
@@ -26,5 +24,17 @@ class New
       puts "book_publisher config:subtitle <AN OPTIONAL BOOK SUBTITLE>"
       puts "book_publisher config:author   <AUTHOR NAME>"
     end
+
+    private
+
+    # TODO FIXME HACK move to helpers module
+    def copy_template(path, project_name=".")
+      original_path = File.expand_path("../../../templates/#{path}", __FILE__)
+      new_path      = "#{project_name}/#{path}"
+
+      FileUtils.cp(original_path, new_path)
+    end
+
   end
+
 end

@@ -9,4 +9,11 @@ Manifest.txt
 Rakefile
 README.txt
 templates/config.yml
+templates/android/README.md
+templates/epub/README.md
+templates/html/README.md
+templates/indesign/README.md
+templates/ios/README.md
+templates/mobi/README.md
+templates/pdf/README.md
 test/test_book_publisher.rb
