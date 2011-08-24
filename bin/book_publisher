@@ -6,9 +6,7 @@ if ARGV.empty?
 end
 
 name_spaced_task = ARGV.shift.match(/^(\w+)(:*)(\w*)$/)
-
-name_space = name_spaced_task[1].capitalize
-# name_space = "Settings" if name_space == "Config"
+name_space       = name_spaced_task[1].capitalize
 
 if name_spaced_task[2] == ":"
   task = name_spaced_task[3]
