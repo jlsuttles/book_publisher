@@ -16,9 +16,9 @@ else
   task = "default"
 end
 
-require "commands/#{name_space.downcase}"
+require "book_publisher/commands/#{name_space.downcase}"
 if ARGV.empty?
-  Object.const_get(name_space).send(task.to_sym)
+  BookPublisher.const_get(name_space).send(task.to_sym)
 else
-  Object.const_get(name_space).send(task.to_sym, ARGV)
+  BookPublisher.const_get(name_space).send(task.to_sym, ARGV)
 end

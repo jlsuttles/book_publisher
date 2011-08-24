@@ -2,9 +2,9 @@
 bin/book_publisher
 History.txt
 lib/book_publisher.rb
-lib/commands/config.rb
-lib/commands/new.rb
-lib/commands/stub.rb
+lib/book_publisher/commands/config.rb
+lib/book_publisher/commands/new.rb
+lib/book_publisher/commands/stub.rb
 Manifest.txt
 Rakefile
 README.txt
