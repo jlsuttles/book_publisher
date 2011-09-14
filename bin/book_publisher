@@ -14,9 +14,14 @@ else
   task = "default"
 end
 
-require "book_publisher/commands/#{name_space.downcase}"
-if ARGV.empty?
-  BookPublisher.const_get(name_space).send(task.to_sym)
+require_path = "book_publisher/commands/#{name_space.downcase}"
+if File.exists?(File.expand_path("../../lib/#{require_path}.rb", __FILE__))
+  require require_path
+  if ARGV.empty?
+    BookPublisher.const_get(name_space).send(task.to_sym)
+  else
+    BookPublisher.const_get(name_space).send(task.to_sym, ARGV)
+  end
 else
-  BookPublisher.const_get(name_space).send(task.to_sym, ARGV)
+  puts "HEY! That's not a command!"
 end
