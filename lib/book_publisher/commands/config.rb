@@ -35,7 +35,8 @@ module BookPublisher
 
       def write(property, value)
         config = config_yaml
-        config[property] = value.join(" ")
+        value = value.join(" ")
+        config[property] = value
 
         File.open('config.yml', 'w+') do |file|
           file.puts config.to_yaml
